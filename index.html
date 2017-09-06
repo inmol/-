@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/index.js"></script>
+    <style>
+    	body{
+    		background-color: skyblue;
+    	}
+    	.game-box{
+    		width: 800px;
+    		height: 500px;
+    		margin: 100px auto;
+    		border: 1px solid black;
+    		position: relative;
+    		overflow: hidden;
+    	}
+		.bgi{
+			width: 1076px;
+			height: 500px;
+			position: absolute;
+			top: 0px;
+			background: url(img/背景1.jpg) repeat-x;
+		}
+		.bird{
+			width: 40px;
+			height: 28px;
+			background:url(img/精灵.jpg) no-repeat;
+			z-index: 10;
+			position: absolute;
+			top: 230px;
+			left: 200px;
+
+		}
+		.pillar{
+			width: 60px;
+			height: 500px;
+			position: absolute;
+			z-index: 10px;
+		}
+		.pillar-top,
+		.pillar-bottom{
+			width: 60px;
+			height: 450px;
+			display: block;
+			position: absolute;
+			background-image: url(img/障碍物.jpg);
+			background-repeat: no-repeat;	
+		}
+		.game-over{
+			width: 300px;
+			height: 100px;
+			background-color: skyblue;
+			border:3px solid red;
+			border-radius: 20px;
+			position: absolute;
+			top: 50%;
+			margin-top: -50px;
+			left: 50%;
+			margin-left: -150px;
+			z-index: 20;
+			display: none;
+		}
+		.game-over span{
+			display: block;
+			font-size: 40px;
+			color: black;
+			position: absolute;
+			top: 25px;
+			left: 70px;
+		}
+		.game-over a{
+			color: #fff;
+			position: absolute;
+			bottom: 5px;
+			right: 5px;	
+		}
+		.game-over a:hover{
+			color: pink;
+		}
+		.game-start{
+			width: 200px;
+			height: 50px;
+			background-color: yellow;
+			border:3px solid red;
+			border-radius: 15px;
+			text-align: center;
+			line-height: 50px;
+			font-size: 25px;
+			position: absolute;
+			top: 50%;
+			margin-top: -25px;
+			left: 50%;
+			margin-left: -100px;
+			z-index: 20;
+		}
+		.score{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			z-index: 30;
+			color: red;
+			font-size: 20px;
+		}
+    </style>
+    <body>
+    	<div class="game-box">
+    		<span class="score">得分：00</span>
+    		<div class="bgi"></div>
+    		<div class="bird"></div>
+    		<div class="game-over">
+    			<span>游戏结束</span>
+    			<a href="index.html">重新开始</a>
+    		</div>
+    		<div class="game-start">开始游戏</div>
+    		<script id="pliarMode" type="text/plain">
+	    		<div class="pillar">
+	    			<div class="pillar-top"></div> 
+	    			<div class="pillar-bottom" ></div>
+	    		</div>
+    		</script>
+    	</div>
+    </body>
+</html>
